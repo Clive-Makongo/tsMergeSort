@@ -69,7 +69,7 @@ function merge(arrayL: number[], arrayR: number[]): number[] {
 
 let final: number[] = mergeSortRecc([38, 927, 443, 35, 9, 824, 10, 334, 69, 82, 510, 1000]);
 
-console.log(final, "FIALLLLLLLLL")
+console.log(final, "FINALLLLLLLLL")
 // PLAYGROUND TEST
 
 // function wrapInArray(obj: string | string[]): string[] {
