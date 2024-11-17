@@ -1,17 +1,31 @@
 
 function mergeSortRecc(array: number[]): number[] {
-    // first split the array reccursively
+    // stop base case
+    if (array.length === 1) {
+        return array;
+    }
 
-    let
+    //  split the array
 
-    // compare first elements
+    const middle: number = Math.floor(array.length / 2); // find middle index
 
-    //push back to earlier array reccursively
+    // split array at middle index
+    const right: number[] = array.splice(0, middle);
 
-    // return full array
+    console.log(right, "RIGHT");
+    console.log(array, "LEFT");
+
+    // call function reccursively with split elements
+    mergeSortRecc(right);
+    mergeSortRecc(array);
+
+    // feed to merge function
+    
     return array;
-}
+};
 
+
+mergeSortRecc([38, 27, 43, 3, 9, 82, 10]);
 
 // function to merge the arrays
 function merge(arrayL: number[], arrayR: number[]): number[] {
@@ -20,19 +34,26 @@ function merge(arrayL: number[], arrayR: number[]): number[] {
     let indexL: number = 0;
     let indexR: number = 0;
 
+    // compare first elements
+
+    //push back to earlier array reccursively
+
+    // return full array
+
     return mergedArray;
 }
 
 
+// PLAYGROUND TEST
 
-function wrapInArray(obj: string | string[]): string[] {
-    if (typeof obj === "string") {
-        return [obj];
-        //          ^?
-    }
-    return obj;
-}
+// function wrapInArray(obj: string | string[]): string[] {
+//     if (typeof obj === "string") {
+//         return [obj];
+//         //          ^?
+//     }
+//     return obj;
+// }
 
-let x: string[] = wrapInArray(["hello"]);
+// let x: string[] = wrapInArray(["hello"]);
 
-console.log(x)
+// console.log(x)
