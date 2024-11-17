@@ -3,6 +3,7 @@ function mergeSortRecc(array) {
     if (array.length === 1) {
         return array;
     }
+    ;
     //  split the array
     var middle = Math.floor(array.length / 2); // find middle index
     // split array at middle index
@@ -13,10 +14,10 @@ function mergeSortRecc(array) {
     mergeSortRecc(right);
     mergeSortRecc(array);
     // feed to merge function
+    merge(right, array);
     return array;
 }
 ;
-mergeSortRecc([38, 27, 43, 3, 9, 82, 10]);
 // function to merge the arrays
 function merge(arrayL, arrayR) {
     var mergedArray = [];
@@ -27,6 +28,8 @@ function merge(arrayL, arrayR) {
     // return full array
     return mergedArray;
 }
+;
+mergeSortRecc([38, 27, 43, 3, 9, 82, 10]);
 // PLAYGROUND TEST
 // function wrapInArray(obj: string | string[]): string[] {
 //     if (typeof obj === "string") {
